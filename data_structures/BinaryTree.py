@@ -1,6 +1,7 @@
 """
 Basic binary tree, Not BST supports most common operations and fills left to right
 """
+from queue import Queue
 
 
 class _BinTreeNode:
@@ -26,3 +27,14 @@ class _BinTreeNode:
             self.preorder_traversal(subtree.left)
             self.preorder_traversal(subtree.right)
             print(subtree.data)
+
+    def breadth_first_traversal(self,subtree):
+        Queue q
+        q.enqueue(subtree)
+        while not q.isEmpty():
+            node = q.dequeue()
+            print(node.data)
+            if node.left is not None:
+                q.enqueue(node.left)
+            if node.right is not None:
+                q.enqueue(node.right)
