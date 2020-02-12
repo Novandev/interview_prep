@@ -5,11 +5,11 @@ this will compute the nth fibbonacci number
 
 
 def fibbonacci(val):
-    # print(/val)
-    if val <= 2:
+    if val <= 1:
         return 1
     else:
+        # print(val)
         return fibbonacci(val-1) + fibbonacci(val-2)
 if __name__ == "__main__":
-
-    print(fibbonacci(20))
+    for i in range(6):
+        print(fibbonacci(i))
