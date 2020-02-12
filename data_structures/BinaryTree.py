@@ -29,12 +29,12 @@ class _BinTreeNode:
             print(subtree.data)
 
     def breadth_first_traversal(self,subtree):
-        Queue q
-        q.enqueue(subtree)
-        while not q.isEmpty():
-            node = q.dequeue()
+        q = Queue()
+        q.put(subtree)
+        while not q.empty():
+            node = q.get()
             print(node.data)
             if node.left is not None:
-                q.enqueue(node.left)
+                q.put(node.left)
             if node.right is not None:
-                q.enqueue(node.right)
+                q.put(node.right)

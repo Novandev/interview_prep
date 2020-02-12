@@ -14,7 +14,7 @@ def print_branches_recursively(branches):
     # print(branches[0])
     if len(branches) == 1:
         branch = branches[0]
-        # print(branch)
+        print(branch)
 
     else:
         mid_point = len(branches) // 2
