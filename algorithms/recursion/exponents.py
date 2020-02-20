@@ -15,3 +15,7 @@ def exp(val,exponent):
         return result
     else:
         return result * val
+
+
+if __name__ == "__main__":
+    print(exp(8,2))
