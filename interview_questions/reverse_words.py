@@ -6,6 +6,7 @@ take a string of words such as
  "words of string"
 
  make sure to trim any white spaces
+ 
 Algorithm:
 1. make a sentinel string  that will track a current "word" out of a string
 a "word" is defined as a set of characters withour a space, so if spaces are skipped

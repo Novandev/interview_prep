@@ -1,6 +1,19 @@
 """
-This algorithm takes an unsorted array arr and a value k and finds the item pairs in tha array that if subtracted,
- match k this is then added to the array as both the element and the element minues the subtracted value
+Given an array of numbers and a value, return all of the combibation of
+numerbs that add up the the given value
+
+
+Algorithm:
+    Make a array to store the values
+
+1. make a dictionary/hashtable out of the array O(N) time and space
+2. interatre over the array
+    for each value in the array O(N)
+        if the element minus k is a value on the dictionary O(1)
+        add the element and the element - the value to a tuple and\
+        append this to the array of stored values
+
+3. return the array of store values
 
 """
 
