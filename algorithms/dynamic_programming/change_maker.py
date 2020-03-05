@@ -22,7 +22,7 @@ def change_maker_attempt_1(amount,aList):
     for num in aList:
         even_divided = amount - (amount % num)
         print(even_divided)
-        aList_dict[num] = even_divided / num
+        aList_dict[num] = even_divided // num
         amount = amount % num
     print(aList_dict)
 
