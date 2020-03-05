@@ -30,22 +30,21 @@ def permutation_maker(a, n, k, depth, used, current_permutation = [], permutatio
             recurse the function, but increse the depth
 
   '''
-  if depth == k: #if the "depth" is equal to the lenth of the list
-    permutations.append(current_permutation[::]) # use deepcopy because current_permutation is tracking all partial solution, it eventually become []
-    return
+  if depth == k: # if the "depth" is equal to the stopping point k
+    permutations.append(current_permutation[::]) # use deepcopy because current_permutation is tracking all partial solution, it eventually becomes []
+    return #return up the stak as the work is done here
   
-  for i in range(n):
+  for i in range(n): # go over every variable in ever recursive call
     print(i)
     print(used)
-    if not used[i]:
-      # generate the next solution from curr
-      current_permutation.append(a[i])
-      used[i] = True
+    if not used[i]: # If the used array that tracks whats been used in the recursive call for this iteration of n hasent been done
+      current_permutation.append(a[i]) # To the current permutation array, append the data at the current postision to the array we're in
+      used[i] = True # For this current iteration 
       print(current_permutation)
       # move to the next solution
       permutation_maker(a, n, k, depth+1, used, current_permutation, permutations)
       
-      #backtrack to previous partial state
+      # When the recursion has finished
       current_permutation.pop()
       print('backtrack: ', current_permutation)
       used[i] = False

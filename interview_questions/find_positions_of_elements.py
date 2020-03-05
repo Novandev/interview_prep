@@ -10,7 +10,7 @@ find positions of all elements, returned as a list
 """
 def recBinarySearch( target, theSeq, first, last ):
 # If the sequence cannot be subdivided further, we are done.
-    if len(theSeq[first:last])<3:
+    if len(theSeq[first:last])==2:
         print(theSeq[first:last])
     else :
         # Find the midpoint of the sequence.
@@ -39,6 +39,7 @@ def find_position_of_elements(list_1,list_2):
         return [2,1,0]
     if first_item < list_1[len(list_1) - 1]:
         return[len(list_1)-1,len(list_1)-2,len(list_1)-3]
+    
     starting_postion = recBinarySearch(list_2[0],list_1,0,len(list_1)-1)
 
     print(starting_postion)
