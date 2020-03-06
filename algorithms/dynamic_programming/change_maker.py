@@ -15,7 +15,7 @@ def change_maker_attempt_1(amount,aList):
     take the largest value and do a modulus. 
     take the value from that ans subtract it from the largest value
     do division to ficure out how many cam come from that
-    put that into the dick as the value, and repeat with the num now decreased untill it hits 0
+    put that into the dict as the value, and repeat with the num now decreased untill it hits 0
     """
     aList= sorted(aList)[::-1]
     aList_dict = dict()
